@@ -74,5 +74,8 @@ dependencies {
 
     kapt("androidx.lifecycle:lifecycle-compiler:2.6.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+
+    val nav_version = "2.7.2"
+    implementation("androidx.navigation:navigation-compose:$nav_version")
     
 }
