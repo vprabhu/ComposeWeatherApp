@@ -25,7 +25,7 @@ fun WeatherApp() {
     Scaffold { innerPadding ->
         NavHost(
             navController = navController,
-            startDestination = WeatherAppScreens.AddCityScreen.name,
+            startDestination = WeatherAppScreens.WeatherScreen.name,
             modifier = Modifier.padding(innerPadding)
         ) {
             composable(route = WeatherAppScreens.AddCityScreen.name) {
@@ -33,7 +33,9 @@ fun WeatherApp() {
             }
 
             composable(route = WeatherAppScreens.WeatherScreen.name) {
-                WeatherMainScreen()
+                WeatherMainScreen() {
+                    navController.navigate(WeatherAppScreens.ForecastScreen.name)
+                }
             }
 
             composable(route = WeatherAppScreens.ForecastScreen.name) {
